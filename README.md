@@ -1,6 +1,6 @@
 # Integration of Etherum testnet and models
 
-The phase 2 aims to integrate Ethereum testnet and machine learning models. The project is funded by RMIT research grants 🌳
+The last phase aims to integrate Ethereum testnet and machine learning models. The project is funded by RMIT research grants 🌳
 
 ## Install forge
 

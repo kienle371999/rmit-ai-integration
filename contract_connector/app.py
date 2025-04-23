@@ -14,7 +14,7 @@ def push_model():
     tx_hash = service.push_model(timestamp, threat_level, ip_address)
 
     return jsonify({
-        'message': 'Model pushed successfully',
+        'message': 'Model is pushed successfully',
         'txHash': tx_hash
     }), 200
 

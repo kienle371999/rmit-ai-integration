@@ -13,5 +13,5 @@ docs/
 # Dotenv file
 .env
 
-#Python 
+# Python file 
 __pycache__

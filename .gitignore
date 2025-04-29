@@ -15,3 +15,7 @@ docs/
 
 # Python file 
 __pycache__
+
+# Solidity files
+out/
+cache/

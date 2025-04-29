@@ -3,9 +3,12 @@ pragma solidity ^0.8.13;
 
 contract MLModels {
     struct Model {
-        uint256 timestamp;
-        uint8 threatLevel;
-        string ipAddress;
+        uint256 flowDuration;
+        uint256 forwardPackets;
+        uint256 backwardPackets;
+        uint8 trueLabel;
+        uint8 prediction;
+        bool status;
     }
 
     // The moderator is the person deploying the contract
@@ -20,9 +23,12 @@ contract MLModels {
 
     // Add a new model (only callable by moderator)
     function pushModel(
-        uint256 timestamp,
-        uint8 threatLevel,
-        string memory ipAddress
+        uint256 flowDuration,
+        uint256 forwardPackets,
+        uint256 backwardPackets,
+        uint8 trueLabel,
+        uint8 prediction,
+        bool status
     ) external {
         require(
             msg.sender == moderator,
@@ -31,9 +37,12 @@ contract MLModels {
 
         models.push(
             Model({
-                timestamp: timestamp,
-                threatLevel: threatLevel,
-                ipAddress: ipAddress
+                flowDuration: flowDuration,
+                forwardPackets: forwardPackets,
+                backwardPackets: backwardPackets,
+                trueLabel: trueLabel,
+                prediction: prediction,
+                status: status
             })
         );
     }

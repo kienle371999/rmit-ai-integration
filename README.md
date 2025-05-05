@@ -14,9 +14,16 @@ curl -L https://foundry.paradigm.xyz | bash
 forge create --rpc-url <your_rpc_url> --private-key <your_private_key> contract/src/MLModels.sol:MLModels
 ```
 
+## Install required packages
+
+```
+cd contract_connector
+pip install -r requirements.txt
+```
+
 ## Build server
 
 ```
-source contract_connector/connector/bin/activate
+cd contract_connector
 flask --app app.py run --host=0.0.0.0 --port=8000
 ```
